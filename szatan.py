@@ -1,20 +1,30 @@
 # !/usr/bin/python3
 
-val = 665
+res=""
+loglist = []
+while (res!="q"):
+    res=input("add note => [ENTER], [q] to quit, [s] to show all notes so far:\n")
+    if(res!="s"):
+        loglist.append(res)
+    else: # s
+        print("Notes so far:")
+        for it in loglist:
+            print(it)
+#val = 665
 
-print("Szatan: " + str(val))
+#print("Szatan: " + str(val))
 
 #ok, let's do fizzbuzz
 
-for iterator in range (1,101):
-    if(iterator%3==0 and iterator%5==0):
-        print("FizzBuzz")
-    elif (iterator%3==0):
-        print("Fizz")
-    elif (iterator%5==0):
-        print("Buzz")
-    else:
-        print(str(iterator))
+# for iterator in range (1,101):
+#     if(iterator%3==0 and iterator%5==0):
+#         print("FizzBuzz")
+#     elif (iterator%3==0):
+#         print("Fizz")
+#     elif (iterator%5==0):
+#         print("Buzz")
+#     else:
+#         print(str(iterator))
 
 
 ## loop
