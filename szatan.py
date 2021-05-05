@@ -1,5 +1,9 @@
 # !/usr/bin/python3
 
+from datetime import datetime
+
+
+
 def create_or_append(line):
     file_descriptor = open('data.txt','a', encoding='utf-8')
     file_descriptor.write(line+"\n")
@@ -25,8 +29,11 @@ def notes():
             read_from_file()
         else:
             if(res!='q'):
-                loglist.append(res+"\n")
-                create_or_append(res)
+                now = datetime.now()
+                dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+                string_with_date = dt_string+"\t"+res 
+                loglist.append(string_with_date+"\n")
+                create_or_append(string_with_date)
 
 def main():
     notes()
