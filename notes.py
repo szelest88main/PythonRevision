@@ -39,4 +39,5 @@ def notes():
 def main():
     notes()
 
-main()
+if __name__ == "__main__":
+    main()
