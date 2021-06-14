@@ -2,7 +2,8 @@
 
 from datetime import datetime
 
-# append the line to the 'data.txt' file or create the file first it it doesn't exist
+# append the line to the 'data.txt' file 
+# or create the file first it it doesn't exist
 def create_or_append(line):
     file_descriptor = open('data.txt','a', encoding='utf-8')
     file_descriptor.write(line+"\n")
@@ -10,7 +11,8 @@ def create_or_append(line):
     
 logs_list = []
 
-# read all the lines from 'data.txt', print them to screen and add them to logs_list list.
+# read all the lines from 'data.txt', 
+# print them to screen and add them to logs_list list.
 def read_from_file():
     global logs_list # "global": don't override the global logs_list: use it 
     logs_list = []
@@ -24,7 +26,8 @@ def read_from_file():
 def notes():
     res=""
     while (res!="q"):
-        res=input("add note => [ENTER], [q]uit, [s]how all notes so far, [r]ead saved data:\n")
+        res=input('add note => [ENTER], [q]uit, [s]how '
+        'all notes so far, [r]ead saved data:\n')
         if(res=="s"):
             print("Notes so far:")
             for it in logs_list:
